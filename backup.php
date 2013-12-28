@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 
 $settings = array();
 $settings['dbName'] = 'core';
@@ -32,7 +33,7 @@ exec( "mysqldump -u ". $settings['dbUser'] ." --password=" . $settings['dbPasswo
 exec( "cp mysqldump.sql.gz.tmp " . $settings['dailybackupsfolder']. "/dbdump-" . date("Y-m-d") . ".sql.gz" );
 
 $today = strtotime( 'today', time() );
-$week_end = strtotime('next Sunday', time());
+$week_end = strtotime('next Sunday', time() - 24*60*60); // this will give us sunday of this week
 if( $week_end == $today )
 {
 	echo "Today is sunday, copying to weekly backup folder as well\n";
