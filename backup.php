@@ -51,3 +51,4 @@ echo "Now deleting old and temporary backups \n";
 exec("find " .$settings['dailybackupsfolder']. "/dbdump*.gz -maxdepth 1 -type f -mtime +7 -delete");
 exec("find " .$settings['weeklybackupsfolder']. "/dbdump*.gz -maxdepth 1 -type f -mtime +32 -delete");
 exec("find " .$settings['monthlybackupsfolder']. "/dbdump*.gz -maxdepth 1 -type f -mtime +92 -delete");
+exec("rm  mysqldump.sql.gz.tmp ");
