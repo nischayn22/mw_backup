@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @author Nischay Nahata <nischayn22@gmail.com>
+ * @license GPL v2 or later
+ */
+
 error_reporting(E_ERROR | E_PARSE);
 
 $settings = array();
