@@ -54,7 +54,7 @@ if( $week_end == $today )
         exec( "cp imagesbackup.tar.gz.tmp " . $settings['weeklybackupsfolder']. "/imagesbackup-" . date("Y-m-d") . ".tar.gz" );
 }
 
-$month_end = strtotime('last day of this month', time());
+$month_end = (strtotime('next month',strtotime(date('m/01/y'))) - 24*60*60); // this will give us the last day of this month
 if( $today == $month_end )
 {
 	echo "Today is last day of month, copying to monthly backup folder as well\n";
