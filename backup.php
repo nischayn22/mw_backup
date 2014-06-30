@@ -58,7 +58,7 @@ $month_end = (strtotime('next month',strtotime(date('m/01/y'))) - 24*60*60); // 
 if( $today == $month_end )
 {
 	echo "Today is last day of month, copying to monthly backup folder as well\n";
-	exec( "cp mysqldump.sgl.gz.tmp " . $settings['monthlybackupsfolder']. "/dbdump-" . date("Y-m-d")  . ".sql.gz" );
+	exec( "cp mysqldump.sql.gz.tmp " . $settings['monthlybackupsfolder']. "/dbdump-" . date("Y-m-d")  . ".sql.gz" );
         exec( "cp imagesbackup.tar.gz.tmp " . $settings['monthlybackupsfolder']. "/imagesbackup-" . date("Y-m-d") . ".tar.gz" );
 }
 
