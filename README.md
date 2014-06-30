@@ -9,6 +9,11 @@ Usage
 Update the settings variables at the top of the script and run as a daily cronjob.
 
 
-Credits
+Creation Credits
 =========
 Nischay Nahata for wikiworks.com
+
+
+Bugs and Testing
+=========
+https://github.com/CityHallReview
