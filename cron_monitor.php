@@ -22,7 +22,7 @@ if (strpos($line, $line_to_check) !== false) {
 	}
 
 	$file_to_check_without_ext = explode('.', $file_to_check)[0];
-	$file_to_check_ext = explode('.', $file_to_check)[0];
+	$file_to_check_ext = explode('.', $file_to_check)[1];
 
 	if (!file_exists($file_to_check_without_ext)) {
 		mkdir( $file_to_check_without_ext, 0777, true);
