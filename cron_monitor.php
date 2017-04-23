@@ -28,7 +28,7 @@ if (strpos($line, $line_to_check) !== false) {
 		mkdir( $file_to_check_without_ext, 0777, true);
 	}
 
-	exec( "cp $file_to_check " . $file_to_check_without_ext. "/$file_to_check_without_ext-" . date("Y-m-d-h-i") . "." . $file_to_check_ext );
+	exec( "mv $file_to_check " . $file_to_check_without_ext. "/$file_to_check_without_ext-" . date("Y-m-d-h-i") . "." . $file_to_check_ext );
 
 } else {
 	echo "Cron failed to run \n";
